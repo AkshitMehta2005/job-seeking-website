@@ -96,8 +96,8 @@ p {
   font-size: 1.6rem;
 }
 .authPage .container .header img {
-  width: 300px;
-  height: 120px;
+  width: 200px;
+  height: 200px;
   margin: 0 auto;
 }
 .authPage .container .header {
@@ -588,7 +588,7 @@ p {
   background: #f1f3f6;
   min-height: 100vh;
   padding: 50px 20px;
-}
+} 
 .jobs .container {
   display: flex;
   flex-direction: column;
@@ -1160,8 +1160,8 @@ nav .container {
   justify-content: space-between;
 }
 nav .container .logo {
-  width: 120px;
-  height: 120px;
+  width: 160px;
+  height: 160px;
 }
 nav .container .logo img {
   width: 100%;

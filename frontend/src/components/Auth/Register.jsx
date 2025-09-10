@@ -22,7 +22,7 @@ const Register = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:4000/api/v1/user/register",
+        "http://localhost:3000/api/v1/user/register",
         { name, phone, email, role, password },
         {
           headers: {
@@ -53,7 +53,7 @@ const Register = () => {
       <section className="authPage">
         <div className="container">
           <div className="header">
-            <img src="/JobZeelogo.png" alt="logo" />
+            <img src="/jobifylogo.png" alt="logo" />
             <h3>Create a new account</h3>
           </div>
           <form>
@@ -73,8 +73,8 @@ const Register = () => {
               <div>
                 <input
                   type="text"
-                  placeholder="Zeeshan"
-                  value={name}
+                  placeholder="Akshit Mehta"
+                  value={name} 
                   onChange={(e) => setName(e.target.value)}
                 />
                 <FaPencilAlt />
@@ -85,7 +85,7 @@ const Register = () => {
               <div>
                 <input
                   type="email"
-                  placeholder="zk@gmail.com"
+                  placeholder="akshit@gmail.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />

@@ -23,7 +23,7 @@ const applicationSchema = new mongoose.Schema({
   },
   address: {
     type: String,
-    required: [true, "Please enter your Address!"],
+    required: [true, "Please enter your Address!"],  
   },
   resume: {
     public_id: {
@@ -43,7 +43,7 @@ const applicationSchema = new mongoose.Schema({
     },
     role: {
       type: String,
-      enum: ["Job Seeker"],
+      enum:  ["Job Seeker"],
       required: true,
     },
   },

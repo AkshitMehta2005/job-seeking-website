@@ -6,7 +6,7 @@ import { FaRegUser } from "react-icons/fa";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { Context } from "../../main";
-
+ 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -18,7 +18,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:4000/api/v1/user/login",
+        "http://localhost:3000/api/v1/user/login",
         { email, password, role },
         {
           headers: {
@@ -46,7 +46,7 @@ const Login = () => {
       <section className="authPage">
         <div className="container">
           <div className="header">
-            <img src="/JobZeelogo.png" alt="logo" />
+            <img src="/jobifylogo.png" alt="logo" />
             <h3>Login to your account</h3>
           </div>
           <form>
@@ -66,7 +66,7 @@ const Login = () => {
               <div>
                 <input
                   type="email"
-                  placeholder="zk@gmail.com"
+                  placeholder="name@gmail.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />

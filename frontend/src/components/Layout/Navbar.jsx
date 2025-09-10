@@ -13,7 +13,7 @@ const Navbar = () => {
   const handleLogout = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:4000/api/v1/user/logout",
+        "http://localhost:3000/api/v1/user/logout",
         {
           withCredentials: true,
         }
@@ -30,7 +30,7 @@ const Navbar = () => {
     <nav className={isAuthorized ? "navbarShow" : "navbarHide"}>
       <div className="container">
         <div className="logo">
-          <img src="/JobZee-logos__white.png" alt="logo" />
+          <img src="/jobifylogo.png" alt="logo" />
         </div>
         <ul className={!show ? "menu" : "show-menu menu"}>
           <li>
@@ -46,7 +46,7 @@ const Navbar = () => {
           <li>
             <Link to={"/applications/me"} onClick={() => setShow(false)}>
               {user && user.role === "Employer"
-                ? "APPLICANT'S APPLICATIONS"
+                ? "APPLICANT'S APPLICATIONS"  
                 : "MY APPLICATIONS"}
             </Link>
           </li>

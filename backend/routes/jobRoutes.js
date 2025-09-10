@@ -1,6 +1,6 @@
 import express from "express";
 import {
-  deleteJob,
+  deleteJob,  
   getAllJobs,
   getMyJobs,
   getSingleJob,

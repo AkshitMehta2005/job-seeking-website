@@ -34,8 +34,8 @@ const Application = () => {
     formData.append("jobId", id);
 
     try {
-      const { data } = await axios.post(
-        "http://localhost:4000/api/v1/application/post",
+      const { data } = await axios.post(   // {response.data ko decuntruct kar diya}
+        "http://localhost:3000/api/v1/application/post",
         formData,
         {
           withCredentials: true,

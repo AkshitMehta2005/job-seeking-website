@@ -6,7 +6,7 @@ export const getAllJobs = catchAsyncErrors(async (req, res, next) => {
   const jobs = await Job.find({ expired: false });
   res.status(200).json({
     success: true,
-    jobs,
+    jobs,  
   });
 });
 
@@ -99,7 +99,7 @@ export const updateJob = catchAsyncErrors(async (req, res, next) => {
     runValidators: true,
     useFindAndModify: false,
   });
-  res.status(200).json({
+  res.status(200).json({ 
     success: true,
     message: "Job Updated!",
   });

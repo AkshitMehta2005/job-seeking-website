@@ -17,20 +17,20 @@ import PostJob from "./components/Job/PostJob";
 import NotFound from "./components/NotFound/NotFound";
 import MyJobs from "./components/Job/MyJobs";
 
-const App = () => {
+const App = () => {     
   const { isAuthorized, setIsAuthorized, setUser } = useContext(Context);
-  useEffect(() => {
+  useEffect( () => {
     const fetchUser = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:4000/api/v1/user/getuser",
+          "http://localhost:3000/api/v1/user/getuser",
           {
             withCredentials: true,
           }
-        );
+        ); 
         setUser(response.data.user);
         setIsAuthorized(true);
-      } catch (error) {
+      } catch (error) {    
         setIsAuthorized(false);
       }
     };

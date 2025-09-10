@@ -16,7 +16,7 @@ const AppWrapper = () => {
         isAuthorized,
         setIsAuthorized,
         user,
-        setUser,
+        setUser,  
       }}
     >
       <App />

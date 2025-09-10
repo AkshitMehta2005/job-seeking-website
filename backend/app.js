@@ -9,22 +9,20 @@ import { errorMiddleware } from "./middlewares/error.js";
 import cookieParser from "cookie-parser";
 import fileUpload from "express-fileupload";
 
-
-
 const app = express();
 config({ path: "./.env" }); 
 
 app.use(
-  cors({
+  cors({ 
     origin: [process.env.FRONTEND_URL],
     method: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
-  })
+  })  
 );
 
 app.use(cookieParser());
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true })); // 
 
 app.use(
   fileUpload({
