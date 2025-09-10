@@ -11,7 +11,7 @@ const AllJobsPage = () => {
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/api/v1/job/getall", {
+        const res = await axios.get("https://job-seeking-website-vmyp.onrender.com/api/v1/job/getall", {
           withCredentials: true,
         });
         setJobList(res.data.jobs); // ✅ Set only the jobs array

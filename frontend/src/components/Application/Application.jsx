@@ -35,7 +35,7 @@ const Application = () => {
 
     try {
       const { data } = await axios.post(   // {response.data ko decuntruct kar diya}
-        "http://localhost:3000/api/v1/application/post",
+        "https://job-seeking-website-vmyp.onrender.com/api/v1/application/post",
         formData,
         {
           withCredentials: true,

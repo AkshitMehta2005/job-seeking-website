@@ -18,7 +18,8 @@ const __dirname = path.resolve();
 
 app.use(
   cors({ 
-    origin: [process.env.FRONTEND_URL],
+    // origin: [process.env.FRONTEND_URL],
+    origin: "https://job-seeking-website-vmyp.onrender.com/",
     method: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
   })  
