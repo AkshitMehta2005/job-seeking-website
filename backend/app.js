@@ -8,9 +8,13 @@ import cors from "cors";
 import { errorMiddleware } from "./middlewares/error.js";
 import cookieParser from "cookie-parser";
 import fileUpload from "express-fileupload";
-
+import path from "path";
+ 
 const app = express();
 config({ path: "./.env" }); 
+
+const __dirname = path.resolve();
+
 
 app.use(
   cors({ 
@@ -34,6 +38,11 @@ app.use("/api/v1/user", userRouter);
 app.use("/api/v1/job", jobRouter);
 app.use("/api/v1/application", applicationRouter);
 dbConnection();
+
+app.use(express.static(path.join(__dirname,"/frontend/dist")));
+app.get('*',(req,res)=>{
+  res.sendFile(path.resolve(__dirname,"frontend","dist","index.html"));
+})
 
 app.use(errorMiddleware);
 export default app;
